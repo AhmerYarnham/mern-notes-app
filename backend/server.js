@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "https://mern-notes-app-amber-nu.vercel.app" }));
 app.use(express.json());
 
 const authRoutes = require('./routes/auth');
